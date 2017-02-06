@@ -9,7 +9,7 @@ totalVisitors.transaction(function (currentData) {
 var visitor = {
     path: window.location.pathname,
     arrivedAt: Firebase.ServerValue.TIMESTAMP,
-    userAgent: navigator.userAgent.split(" ").pop();
+    userAgent: navigator.userAgent
 };
 
 var activeVisitorRef = activeVisitors.push(visitor, function () {
