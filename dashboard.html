@@ -1,87 +1,73 @@
-
-
-
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>fiiire</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css">
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>fiiire</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css">
+    </head>
+    <body>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        <span>Dashboard 
+                            <span id="total-visitors" class="tag is-light is-medium"></span>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="notification">
+                <section>
+                    <h4 class="subtitle is-3">
+                        <strong>Active Visitors: </strong>
+                    </h4>
+                </section>
 
-	<section class="hero is-primary">
-  		<div class="hero-body">
- 			<div class="container">
- 				 <h1 class="title">
-					<span>Analytics Dashboard</span>
-	 			</h1>
-  			</div>
-   		 </div>
-	</section>
-	<div class="container">
-	  <div class="notification">
-		<section>
-			<h4 class="subtitle is-3"><strong>Active Visitors: 
-				<span id="total-visitors" class="tag is-primary is-large"></span>
-			</strong>
-			</h4>
-		</section>
+                <section>
+                    <div style="margin:15px;" class="box">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Path</th>
+                                    <th><abbr title="Browser">Browser</abbr></th>
+                                    <th><abbr title="Arrived At">Arrived At</abbr></th>
+                                </tr>
+                            </thead>
+                            <tbody id="active-visitors"></tbody>
+                        </table>
+                    </div>
+                </section>
 
-		<section>
-			<div style="margin:15px;" class="box">
-				<table class="table">
-				  <thead>
-				    <tr>
-				      <th>Path</th>
-				      <th><abbr title="Browser">Browser</abbr></th>
-				      <th><abbr title="Arrived At">Arrived At</abbr></th>
-				    </tr>
-				  </thead>
-				  <tbody id="active-visitors"></tbody>
-				</table>
-			</div>
-		</section>
+                <section>
+                    <h4 class="subtitle is-3"><strong>Past Visitors: <span id="total-visitors"></span></strong></h4>
+                </section>
 
-		<section>
-			<h4 class="subtitle is-3"><strong>Past Visitors: <span id="total-visitors"></span></strong></h4>
-		</section>
+                <section>
+                    <div style="margin:15px;" class="box">
+                        <table  class="table">
+                            <thead>
+                                <tr>
+                                    <th>Path</th>
+                                    <th><abbr title="Browser">Browser</abbr></th>
+                                    <th><abbr title="Arrived At">Arrived At</abbr></th>
+                                    <th><abbr title="Left At">Left At</abbr></th>
+                                    <th><abbr title="Spent">Spent (Sec)</abbr></th>
+                                </tr>
+                            </thead>
+                            <tbody id="past-visitors"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
 
-		<section>
-			<div style="margin:15px;" class="box">
-				<table  class="table">
-				  <thead>
-				    <tr>
-				      <th>Path</th>
-				      <th><abbr title="Browser">Browser</abbr></th>
-				      <th><abbr title="Arrived At">Arrived At</abbr></th>
-				      <th><abbr title="Left At">Left At</abbr></th>
-				      <th><abbr title="Spent">Spent (Sec)</abbr></th>
+        <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+        <script src='https://code.jquery.com/jquery-2.1.1.js'></script>
+        <script src='dashboard.js'></script>
 
-				    </tr>
-				  </thead>
-				  <tbody id="past-visitors"></tbody>
-				</table>
-			</div>
-		</section>
-
-	
-
-
-
-
-	  </div>
-	</div>
-
-
-
-
-	<script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
-	<script src='https://code.jquery.com/jquery-2.1.1.js'></script>
-	<script src='dashboard.js'></script>
-
-  
-</body>
+    </body>
 </html>
